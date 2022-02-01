@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 1,
+      "required": true
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
