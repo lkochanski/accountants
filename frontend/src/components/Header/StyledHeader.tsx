@@ -1,5 +1,4 @@
-import {alpha, AppBar, Grid, styled} from "@mui/material";
-import Typography from "@mui/material/Typography";
+import {alpha, AppBar, Grid, styled, useTheme} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 
 export const StyledHeader = styled(AppBar)(({theme}) => ({
@@ -26,7 +25,9 @@ export const StyledNavItem = styled('div')(({theme}) => ({
             : 'white',
         "&:after": {
             content: '""',
-            background: theme.palette.primary.main,
+            background: theme.palette.mode === 'light'
+                ? theme.palette.primary.main
+                : theme.palette.secondary.main,
             width: 'calc(100% + 20px)',
             height: 0,
             position: 'absolute',
@@ -39,6 +40,7 @@ export const StyledNavItem = styled('div')(({theme}) => ({
         }
     },
 }));
+
 
 export const StyledIconButton = styled(IconButton)(({theme}) => ({
     color: theme.palette.mode === "light"
@@ -64,3 +66,19 @@ export const StyledContactBar = styled(Grid)(({theme}) => ({
 export const smallHeader = {
     height: '70px',
 }
+
+export const active = {
+    color: 'red'
+}
+
+export const StyledMobileNavItem = styled('div')(({theme}) => ({
+    padding: '15px 0',
+    a: {
+        textDecoration: 'none',
+        fontSize: '40px',
+        fontWeight: '600',
+        color: theme.palette.mode === "light"
+            ? 'black'
+            : 'white',
+    }
+}));

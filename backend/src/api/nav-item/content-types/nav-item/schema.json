@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nav_items",
+  "info": {
+    "singularName": "nav-item",
+    "pluralName": "nav-items",
+    "displayName": "navItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 15,
+      "minLength": 3
+    },
+    "route": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 15,
+      "minLength": 1
+    }
+  }
+}
